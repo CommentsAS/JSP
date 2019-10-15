@@ -1,3 +1,5 @@
+
+  
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -34,19 +36,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">YOUR LOGO</a>
+                <a class="navbar-brand" href="./main.do">YOUR LOGO</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="./main.do">HOME</a></li>
                     <li><a href="./insight.do">인사이트</a></li>
-		    <c:if test = "${vo.user_id eq null}">
+                    <c:if test = "${vo.user_id eq null}">
                     <li><a href='./login.do'>로그인</a></li>
                     </c:if>
                     <c:if test = "${vo.user_id ne null}">
                     <li><a href='./logout.do'>로그아웃</a></li>
                     </c:if>                 
-                    <li><a href="./join.do">회원가입</a></li>
+                    <c:if test = "${vo.user_id eq null}">
+                    </c:if>
+                    <c:if test = "${vo.user_id ne null}">
+                    </c:if>
+                    <li><a href='./join.do'>회원가입</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
@@ -99,7 +105,7 @@
     
         <div class="container">
         	<div id="title">
-        	<h1 style="text-align: center"> <b>POPULAR TOP10</b> </h1>
+        	<h1 style="text-align: center"> <b>POPULAR TOP100</b> </h1>
         	</div>
         	<br/><br/>
             <table class="table " id="t-table">
@@ -153,6 +159,9 @@
 	            </tr>
             </c:forEach>
             
+            
+            
+            
             </tbody>
             </table>
             
@@ -171,11 +180,7 @@
                 <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 ">
                     <i class="fa fa-quote-left fa-3x"></i>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                        
                     </p>
                 </div>
             </div>
@@ -183,20 +188,6 @@
 
     </section>
     <!--/.NOTE END-->
-    <section id="clients">
-
-
-        <div class="container">
-            <div class="row text-center pad-bottom">
-                <div class="col-md-12">
-                    <img src="./resources/assets/img/clients.png" alt="" class="img-responsive" />
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!--/.CLIENTS END-->
-
 
     <!-- Footer Start -->
     <section id="footer-sec">
@@ -206,9 +197,7 @@
                 <div class="col-md-4">
                     <h4> <strong>ABOUT COMPANY</strong> </h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
                     </p>
                     <a href="#">read more</a>
                 </div>
@@ -246,3 +235,4 @@
 </body>
 
 </html>
+
