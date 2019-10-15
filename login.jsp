@@ -1,4 +1,4 @@
-﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,7 +30,7 @@
 			f.submit();
 		}
 		function join(){
-			f.action ="./add.do"
+			f.action ="./join.do"
 			f.method = "get";
 			f.submit();
 		}
@@ -49,14 +49,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">YOUR LOGO</a>
+                <a class="navbar-brand" href="./main.do">YOUR LOGO</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="services.html">SERVICES</a></li>
-                    <li><a href="portfolio.html">PORTFOLIO</a></li>
-                    <li><a href="pricing.html">PRICING</a></li>
+                    <li><a href="./main.do">HOME</a></li>
+                    <li><a href="./insihght.do">인사이트</a></li>
+                    <li><a href="./login.do">로그인</a></li>
+                    <li><a href="./join.do">회원가입</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
@@ -141,18 +141,7 @@
 
     </section>
     <!--/.NOTE END-->
-    <section id="clients">
 
-
-        <div class="container">
-            <div class="row text-center pad-bottom">
-                <div class="col-md-12">
-                    <img src="assets/img/clients.png" alt="" class="img-responsive" />
-                </div>
-
-            </div>
-        </div>
-    </section>
     <!--/.CLIENTS END-->
     <section id="footer-sec">
 
