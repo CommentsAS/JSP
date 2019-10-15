@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
@@ -21,7 +22,6 @@
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <style>
-
     </style>
 
 </head>
@@ -36,14 +36,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">YOUR LOGO</a>
+                <a class="navbar-brand" href="./main.do">YOUR LOGO</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="./main.do">HOME</a></li>
-                    <li><a href="services.html">인사이트</a></li>
-                    <li><a href="portfolio.html">로그인</a></li>
-                    <li><a href="join.html">회원가입</a></li>
+                    <li><a href="./insihght.do">인사이트</a></li>
+                    <li><a href="./login.do">로그인</a></li>
+                    <li><a href="./join.do">회원가입</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
@@ -274,7 +274,7 @@
                                 </div>
                                 <div class="input_form col2">
                                     <div class="input_wrap">
-                                        <label class="form_tit bullet" for="password">비밀번호</label>
+                                        <label class="form_tit bullet" for="pwd">비밀번호</label>
                                         <input type="password" name="pwd" id="password" required="">
                                         
                                     </div>
@@ -379,7 +379,7 @@
                             <div class="btn_wrap">
                                 <input class="btn" type='submit' value="회원 가입 완료">
                                 <button class="btn color2"
-                                    onclick="location.href='/loginForm.jsp'; event.preventDefault();">취소</button>
+                                    onclick="location.href='./main.do'; event.preventDefault();">취소</button>
                             </div>
                         </div>
                     </div>
@@ -411,18 +411,7 @@
 
     </section>
     <!--/.NOTE END-->
-    <section id="clients">
-
-
-        <div class="container">
-            <div class="row text-center pad-bottom">
-                <div class="col-md-12">
-                    <img src="assets/img/clients.png" alt="" class="img-responsive" />
-                </div>
-
-            </div>
-        </div>
-    </section>
+    
     <!--/.CLIENTS END-->
     <section id="footer-sec">
 
