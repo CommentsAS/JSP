@@ -40,7 +40,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="./main.do">HOME</a></li>
                     <li><a href="./insight.do">인사이트</a></li>
-                    <li><a href="./login.do">로그인</a></li>
+		    <c:if test = "${vo.user_id eq null}">
+                    <li><a href='./login.do'>로그인</a></li>
+                    </c:if>
+                    <c:if test = "${vo.user_id ne null}">
+                    <li><a href='./logout.do'>로그아웃</a></li>
+                    </c:if>                 
                     <li><a href="./join.do">회원가입</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
