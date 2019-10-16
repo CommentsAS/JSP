@@ -13,11 +13,11 @@
         <![endif]-->
     <title>Free Multipurpose Template : RUMA</title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="./resources/assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLE CSS -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="./resources/assets/css/font-awesome.min.css" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="./resources/assets/css/style.css" rel="stylesheet" />
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <style>
@@ -49,12 +49,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./main.do">YOUR LOGO</a>
+                <a class="navbar-brand" href="#">YOUR LOGO</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="./main.do">HOME</a></li>
-                    <li><a href="./insihght.do">인사이트</a></li>
+                    <li><a href="./insight.do">인사이트</a></li>
                     <li><a href="./login.do">로그인</a></li>
                     <li><a href="./join.do">회원가입</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
@@ -70,7 +70,7 @@
         <div class="container">
             <div class="row text-center pad-row">
                 <div class="col-md-12">
-                    <h1> PRICING OPTIONS </h1>
+                    <h1>LOGIN</h1>
                 </div>
             </div>
         </div>
@@ -79,54 +79,30 @@
     <!--/.HEADING END-->
 
 
-    <div class="wrap">
-
-
-        <!-- content -->
-        <form action="./login.do" method="post" name="f"">
+<!-- login Form Start-->
+    <div class="wrap" >
+       <form id="login" action="./login.do" method="POST">
             <input type="hidden" name="op" value="join_member">
-            <section id="content" class="content mypage">
-
-                    <h2 class="con_tit", style="text-align:middle">로   그   인</h2>
-                    <div class="join_wrap">
-                        <div class="cont_wrap">
-
-
-
-                                <table class="table_type1 creator">
-                            <div class="box_conts_wrap">
-
-                                <form id="login" action="./login.do" method="POST">
-                                    <div class="login_conts">
-                                        <div class="input_wrap">
-                                            <input type="text" name="user_id" placeholder="아이디" title="아이디" required="">
-                                        </div>
-                                        <div class="input_wrap">
-                                            <input type="password" name="pwd" placeholder="패스워드" title="패스워드" required="">
-                                        </div>
-                                                                                <button class="btn color2"
-                                    onClick="login()">로그인</button>
-                                        <button class="btn color2"
-                                    onClick="join()">회원가입</button>
-                                    </div>
-                                </form>
-
-                            </div>
-                                    
-
-                                    
-                                </table>
-
-                           
-                        </div>
-                    </div>
-            </section>
+            <div class="join_wrap" >
+            	<div class="cont_wrap" style=" text-align: center; margin-bottom:auto;">
+            	 <h4 class="con_sub_tit" style= "text-align: center; font-size: 30px;">로그인</h4>
+            		<div class="box_conts_wrap">
+	            		<div class="login_conts">
+		            		<div class="input_wrap">
+	                        	<input type="text" name="user_id" placeholder="아이디" title="아이디" required="" style="height: 40px;" >
+	                        </div>
+	                        <div class="input_wrap">
+	                      	 	<input type="password" name="pwd" placeholder="패스워드" title="패스워드" required="" style="height: 40px;">
+	                        </div>
+	                    	<button class="btn color2" onClick="login()">로그인</button>
+	                    	<button class="btn color2" onClick="join()">회원가입</button>
+	                    </div>
+                     </div>
+				</div>
+           </div>
         </form>
-        <!-- //content -->
-
-
     </div>
-    <!--/.PRICING-ONE END-->
+<!-- login Form End  -->
 
     <section class="note-sec">
 
