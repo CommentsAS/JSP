@@ -14,14 +14,22 @@
         <![endif]-->
     <title>회원가입 페이지</title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="./resources/assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="./assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLE CSS -->
-    <link href="./resources/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="./assets/css/font-awesome.min.css" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
-    <link href="./resources/assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    
     <style>
+    label.form_tit.bullet {
+   		margin-right: 20px;
+	}
+	th, td {
+		padding : 10px;
+		border-bottom : 1px solid #E6E6E6;
+	}
     </style>
 
 </head>
@@ -36,14 +44,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./main.do">YOUR LOGO</a>
+                <a class="navbar-brand" href="#">YOUR LOGO</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="./main.do">HOME</a></li>
-                    <li><a href="./insihght.do">인사이트</a></li>
+                    <li><a href="./insight.do">인사이트</a></li>
+                    <c:if test='${empty vo}'>
                     <li><a href="./login.do">로그인</a></li>
-                    <li><a href="./join.do">회원가입</a></li>
+                    </c:if> 
+                    <c:if test='${not empty vo}'>
+                    <li><a href="./logout.do"> 로그아웃 </a></li>
+                    </c:if> 
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </div>
@@ -274,7 +286,7 @@
                                 </div>
                                 <div class="input_form col2">
                                     <div class="input_wrap">
-                                        <label class="form_tit bullet" for="pwd">비밀번호</label>
+                                        <label class="form_tit bullet" for="password">비밀번호</label>
                                         <input type="password" name="pwd" id="password" required="">
                                         
                                     </div>
@@ -284,26 +296,22 @@
 
                             <div class="row row_bottom">
                                 <h4 class="con_sub_tit">채널/광고 정보</h4>
-                                <table class="table_type1 creator">
-
+                                <table class="table_type1">
                                     <colgroup>
                                         <col style="width:121px;">
-                                        <col>
                                     </colgroup>
-                                    <tbody>
                                         <tr>
                                             <th scope="row">유튜브 채널</th>
+                                         
                                             <td id="add_ch">
                                                 <input type="hidden" name="ytch">
-                                                <span
-                                                    class="channel_address">https://www.youtub.com/channel/</span>
-                                                    <input type="text" name="cid" class="youtube_ch">
-
+                                                <span class="channel_address">https://www.youtub.com/channel/</span> <input type="text" name="cid" class="youtube_ch">
                                             </td>
                                         </tr>
-
+                                  
                                         <tr>
-                                            <th scope="row">채널 카테고리</th>
+                                            <th scope="row" rowspan="2">채널 카테고리</th>
+                                        
                                             <td>
                                                 <div class="sel">
                                                     <select name="category">
@@ -351,21 +359,28 @@
                                                         <option value="99" selected="">미분류</option>
                                                     </select>
                                                 </div>
+                                            </td>
+                                       </tr>
+                                       <tr>
+                                            <td>
                                                 <p class="refer">* 광고주와의 매칭을 위해서 정확한 카테고리를 선택해 주세요. </p>
                                             </td>
                                         </tr>
+                                        <hr>
 
                                         <tr>
-                                            <th scope="row">주요 키워드/컨셉</th>
+                                            <th scope="row" rowspan="2">주요 키워드/컨셉</th>
                                             <td>
                                                 <input type="hidden" name="keyword" id="keyword">
                                                 <div class="inp" id="keyword_list">
                                                     <input type="text" placeholder="먹방">
                                                     <input type="text" placeholder="홍보상품">
                                                     <input type="text" placeholder="웹드라마">
-                                                    <input type="text" placeholder="ASMR">
-                                                    <input type="text" placeholder="뷰티">
                                                 </div>
+                                            </td>
+                                        </tr>   
+                                        <tr>
+                                            <td>
                                                 <p class="refer">* 자신만의 매력과 집중하는 주제에 대해 상세한 키워드를 제공할수록 검색의 결과에서 상위
                                                     노출됩니다.</p>
                                             </td>
@@ -379,7 +394,7 @@
                             <div class="btn_wrap">
                                 <input class="btn" type='submit' value="회원 가입 완료">
                                 <button class="btn color2"
-                                    onclick="location.href='./main.do'; event.preventDefault();">취소</button>
+                                    onclick="location.href='/loginForm.jsp'; event.preventDefault();">취소</button>
                             </div>
                         </div>
                     </div>
@@ -411,7 +426,18 @@
 
     </section>
     <!--/.NOTE END-->
-    
+    <section id="clients">
+
+
+        <div class="container">
+            <div class="row text-center pad-bottom">
+                <div class="col-md-12">
+                    <img src="assets/img/clients.png" alt="" class="img-responsive" />
+                </div>
+
+            </div>
+        </div>
+    </section>
     <!--/.CLIENTS END-->
     <section id="footer-sec">
 
